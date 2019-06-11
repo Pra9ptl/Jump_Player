@@ -22,4 +22,10 @@ class GameScene: SKScene {
         self.poop = self.childNode(withName: "poop")
         self.ground = SKSpriteNode(imageNamed: "ground")
     }
+    
+    
+    //touch dectection
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("screen touched")
+    }
 }
