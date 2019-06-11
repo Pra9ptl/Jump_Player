@@ -43,7 +43,7 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         //to apply the impulse we need a physics body
-        let jumpAction = SKAction.applyImpulse(CGVector(dx: 0, dy: 3500), duration: 0.2)
+        let jumpAction = SKAction.applyForce(<#T##force: CGVector##CGVector#>, duration: <#T##TimeInterval#>)(CGVector(dx: 0, dy: 3500), duration: 0.2)
         //jump is control in 3 ways
         // 1. cahnge the mass
         // 2. Change size (height/width)
