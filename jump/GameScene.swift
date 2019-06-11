@@ -11,7 +11,15 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    
+    //make  outlets for all components
+    var robot:SKNode?
+    var poop:SKNode?
+    var ground:SKNode?
+    
     override func didMove(to view: SKView) {
-        
+        self.robot = SKSpriteNode(imageNamed: "robot")
+        self.poop = self.childNode(withName: "poop")
+        self.ground = SKSpriteNode(imageNamed: "ground")
     }
 }
