@@ -18,9 +18,9 @@ class GameScene: SKScene {
     var ground:SKNode?
     
     override func didMove(to view: SKView) {
-        self.robot = SKSpriteNode(imageNamed: "robot")
+        self.robot = self.childNode(withName: "robot")
         self.poop = self.childNode(withName: "poop")
-        self.ground = SKSpriteNode(imageNamed: "ground")
+        self.ground = self.childNode(withName: "ground")
     }
     
     
@@ -28,7 +28,9 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         //to apply the impulse we need a physics body
+        let jumpAction = SKAction.applyImpulse(CGVector(dx: 0, dy: 4000), duration: 0.5)
         
+        self.robot!.run(jumpAction)
         
     }
 }
