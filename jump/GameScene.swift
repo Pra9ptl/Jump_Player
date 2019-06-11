@@ -26,6 +26,9 @@ class GameScene: SKScene {
     
     //touch dectection
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("screen touched")
+        
+        //to apply the impulse we need a physics body
+        
+        
     }
 }
